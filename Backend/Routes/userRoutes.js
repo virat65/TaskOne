@@ -11,6 +11,7 @@ import {
 const userRouter = express.Router();
 userRouter.post("/signup", singup);
 userRouter.post("/login", login);
+userRouter.post("/findallusers", findAlluser);
 userRouter.post("/findbyid/:id", finduserbyId);
 userRouter.delete("/deleteuser/:id", deleteuser);
 userRouter.delete("/deleteAlluser", deleteAll);

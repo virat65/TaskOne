@@ -123,6 +123,12 @@ export const findAlluser = async (req, res) => {
     });
   } catch (error) {
     console.log("Error in findall", error);
+    return res.json({
+      message: "Error fetching users",
+      status: 500,
+      success: false,
+      body: {},
+    });
   }
 };
 
@@ -145,7 +151,13 @@ export const finduserbyId = async (req, res) => {
       });
     }
   } catch (error) {
-    console.log("Error in find user by id");
+    console.log("Error in find user by id", error);
+    return res.json({
+      message: "Error finding user",
+      status: 500,
+      success: false,
+      body: {},
+    });
   }
 };
 
@@ -160,6 +172,12 @@ export const deleteuser = async (req, res) => {
     });
   } catch (error) {
     console.log(error, "Error in delete");
+    return res.json({
+      message: "Error deleting user",
+      status: 500,
+      success: false,
+      body: {},
+    });
   }
 };
 
@@ -174,6 +192,12 @@ export const deleteAll = async (req, res) => {
     });
   } catch (error) {
     console.log(error, "Error in deletAll");
+    return res.json({
+      message: "Error deleting users",
+      status: 500,
+      success: false,
+      body: {},
+    });
   }
 };
 
