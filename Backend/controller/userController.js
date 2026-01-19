@@ -4,8 +4,17 @@ import tokenGen from "../tokenGen/userToken.js";
 export const singup = async (req, res) => {
   try {
     console.log(req.body, "req body from signup");
-    const emailFind = await req.body?.email?.trim();
-    const password = await req.body?.password;
+
+    if (!req.body || !req.body.email || !req.body.password) {
+      return res.json({
+        message: "Email and password are required",
+        status: 400,
+        success: false,
+        body: {},
+      });
+    }
+
+    const emailFind = req.body.email.trim();
     const user = await userModel.findOne({ email: emailFind });
     if (user) {
       return res.json({
@@ -15,32 +24,48 @@ export const singup = async (req, res) => {
         body: {},
       });
     } else {
-
-      const passwordEncrypt = await bcrypt.hash(password, 10);
-      console.log("first")
-      const user = await userModel.create({
+      const passwordEncrypt = await bcrypt.hash(req.body.password, 10);
+      console.log("Creating new user");
+      const newUser = await userModel.create({
         ...req.body,
         password: passwordEncrypt,
       });
 
-      const token = await tokenGen(user._id)
-       user.token = await token.creatusertoken;
-       user.logintime = await token.verifyusertoken.iat;
-      user.save()
+      const token = await tokenGen(newUser._id);
+      newUser.token = token.creatusertoken;
+      newUser.logintime = token.verifyusertoken.iat;
+      await newUser.save();
+
       return res.json({
         message: "User Created Successfully",
         status: 200,
         success: true,
-        body: user,
+        body: newUser,
       });
     }
   } catch (error) {
-    console.log("Error in Signu", error);
+    console.log("Error in Signup", error);
+    return res.json({
+      message: "Error during signup",
+      status: 500,
+      success: false,
+      body: {},
+    });
   }
 };
 export const login = async (req, res) => {
   try {
     console.log(req.body, "req body from login");
+
+    if (!req.body || !req.body.email || !req.body.password) {
+      return res.json({
+        message: "Email and password are required",
+        status: 400,
+        success: false,
+        body: {},
+      });
+    }
+
     const user = await userModel.findOne({ email: req.body.email });
 
     if (!user) {
@@ -56,10 +81,11 @@ export const login = async (req, res) => {
         user.password,
       );
       if (passwordMatch) {
-        const token = await tokenGen(user._id)
-        user.token = token.creatusertoken
-        user.logintime = token.verifyusertoken.iat
-        user.save()
+        const token = await tokenGen(user._id);
+        user.token = token.creatusertoken;
+        user.logintime = token.verifyusertoken.iat;
+        await user.save();
+
         return res.json({
           message: "user login successfully",
           status: 200,
@@ -76,7 +102,13 @@ export const login = async (req, res) => {
       }
     }
   } catch (error) {
-    console.log("Error in login ", error);
+    console.log("Error in login", error);
+    return res.json({
+      message: "Error during login",
+      status: 500,
+      success: false,
+      body: {},
+    });
   }
 };
 
@@ -147,6 +179,15 @@ export const deleteAll = async (req, res) => {
 
 export const updateuser = async (req, res) => {
   try {
+    if (!req.body || !req.body.password) {
+      return res.json({
+        message: "Password is required",
+        status: 400,
+        success: false,
+        body: {},
+      });
+    }
+
     const encryptPassword = await bcrypt.hash(req.body.password, 10);
 
     const user = await userModel.findByIdAndUpdate(
@@ -165,12 +206,18 @@ export const updateuser = async (req, res) => {
     } else {
       return res.json({
         message: "user updated",
-        status: "200",
+        status: 200,
         body: user,
         success: true,
       });
     }
   } catch (error) {
     console.log(error, "Error in updateuser");
+    return res.json({
+      message: "Error during update",
+      status: 500,
+      success: false,
+      body: {},
+    });
   }
 };
