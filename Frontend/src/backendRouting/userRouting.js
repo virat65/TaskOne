@@ -1,5 +1,6 @@
 
-const backendpath = import.meta.env.VITE_backendUrl || "http://localhost:3000";
+const backendpath =
+  import.meta.env.VITE_backendUrl || "https://travel-backend-6y0t.onrender.com";
 console.log(backendpath, "backendpath");
 const API = {
   signup: {
