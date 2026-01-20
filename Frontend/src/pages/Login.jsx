@@ -24,7 +24,7 @@ const Login = () => {
         toast.success(res.data.message);
         cookie.set("userInfo", JSON.stringify(res.data.body));
         navigate("/");
-        setTimeout(() => window.location.reload(), 1000);
+      
       } else {
         toast.error(res.data.message);
       }
@@ -83,6 +83,9 @@ const Login = () => {
 
           <p className="text-center mt-3">
             Don't have an account? <a href="/signup">Sign Up</a>
+          </p>
+          <p className="text-center mt-3">
+          Back to Home <a href="/">Home</a>
           </p>
         </div>
       </div>

@@ -24,9 +24,57 @@
 }
 
 
+.playbtn{
+   background-color: rgb(255, 128, 0);
+}.hero-section {
+  background-image: url("./assets/images/Decore.png");
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-size: contain;
+}
+
+.hero-title {
+  font-size: clamp(2.5rem, 5vw, 5.5rem);
+  font-weight: 800;
+  color: rgb(23, 23, 52);
+  line-height: 1.1;
+}
+
+.orangebtn {
+  background-color: orange;
+  color: white;
+  border: none;
+}
+
+.playbtn {
+  height: 50px;
+  width: 50px;
+  background-color: rgb(255, 128, 0);
+}
+
+.hero-img {
+  max-height: 600px;
+
+}
+
+.hero-section{
+  background-image: url("./assets/images/Decore.png");
+  background-repeat: no-repeat;
+  /* border: 2px solid black; */
+  background-position: right top;
+
+height: 800px;
+  background-size: contain;
+}
+
+.hero-section h2{
+  font-size: 6rem;
+  font-weight: 900;
+  color: rgb(23, 23, 52);
+}
 .travel-img{
-  border:  2px solid black;
-  max-height: 500px;
+  /* border:  2px solid black; */
+  max-height: 860px;
 }
 
 .demo-btn{
@@ -35,11 +83,13 @@
 }
 
 .destinatio-images {
-  height: 550px;
+  height: 450px;
   object-fit: cover;
 }
 
-
+h2,h3,h4,h5{
+  letter-spacing: 3px;
+}
 .scenrey-icons a {
 /* border:  2px solid black; */
 height: 50px;
@@ -78,11 +128,11 @@ font-size: 1.2rem;
 .companies{
   margin-top: 80px;
     margin-bottom: 80px;
-    border: 2px solid black;
+    /* border: 2px solid black; */
 }
 .companies img{
   width: 130px;
-  border: 2px solid black;
+  /* border: 2px solid black; */
   height: 50px;
   object-fit: contain;
 }
@@ -115,4 +165,21 @@ display: flex;
 .subscribe-section input{
   width: 20vw;
   height: 46px;
+}
+.footer
+.footer-icons a
+{
+  justify-content: center;
+  display: flex;
+  align-items: center;
+width: 50px;
+border-radius: 50%;
+height: 50px;
+background-color: rgb(243, 243, 243);
+}
+@media (max-width:990px) {
+  .hero-section{
+    height: 1000px;
+  }
+
 }

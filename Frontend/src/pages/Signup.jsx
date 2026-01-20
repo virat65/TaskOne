@@ -12,6 +12,7 @@ const Signup = () => {
     password: "",
     userType: "user",
     adminKey: "",
+    age:""
   });
 
   const handleChange = (e) => {
@@ -37,6 +38,7 @@ const Signup = () => {
       formData.append("email", data.email);
       formData.append("password", data.password);
       formData.append("userType", data.userType);
+       formData.append("age", data.age);
       if (data.userType === "Admin") {
         formData.append("adminKey", data.adminKey);
       }
@@ -85,6 +87,18 @@ const Signup = () => {
                   name="email"
                   value={data.email}
                   placeholder="Enter your email"
+                  required
+                />
+              </div>
+              <div className="mb-3">
+                <label className="form-label">Your Age</label>
+                <input
+                  onChange={handleChange}
+                  type="text"
+                  className="form-control"
+                  name="age"
+                  value={data.age}
+                  placeholder="Enter your age"
                   required
                 />
               </div>
@@ -146,9 +160,11 @@ const Signup = () => {
                 Sign Up
               </button>
             </form>
-
             <p className="text-center mt-3">
               Already have an account? <a href="/login">Login</a>
+            </p>{" "}
+            <p className="text-center mt-3">
+              Back to Home <a href="/">Home</a>
             </p>
           </div>
         </div>

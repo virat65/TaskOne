@@ -9,19 +9,19 @@ const Companies = () => {
     <div>
       <div className="container companies">
         <div className="row justify-content-around">
-          <div className="col-2">
+          <div className="col-md-2 col-4">
             <img src={c1} alt="" className="unfit-image" />
           </div>
-          <div className="col-2">
+          <div className="col-md-2 col-4">
             <img src={c2} alt="" className="unfit-image" />
           </div>
-          <div className="col-2">
+          <div className="col-md-2 col-4">
             <img src={c3} alt="" className="unfit-image" />
           </div>
-          <div className="col-2">
+          <div className="col-md-2 col-4">
             <img src={c4} alt="" />
           </div>
-          <div className="col-2">
+          <div className="col-md-2 col-4">
             <img src={c5} alt="" />
           </div>
         </div>

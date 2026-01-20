@@ -1,12 +1,17 @@
-import React from 'react'
+import React from "react";
 import "./App.css";
-import Login from './pages/Login';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Singup from './pages/Signup';
-import { ToastContainer } from 'react-toastify';
-import AppLayout from './Layout/AppLayout';
-import Home from './pages/Home';
-import Services from './Components/Services';
+import Login from "./pages/Login";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Singup from "./pages/Signup";
+import { ToastContainer } from "react-toastify";
+import AppLayout from "./Layout/AppLayout";
+import Home from "./pages/Home";
+import Services from "./Components/Services";
+import Allluser from "./pages/Allluser";
+import MyProfile from "./Components/Myprofile";
+
+import ViewUser from "./pages/Viewuser";
+import Deleteuser from "./pages/Deleteuser";
 const App = () => {
   return (
     <div>
@@ -14,7 +19,11 @@ const App = () => {
         <Routes>
           <Route path="/" element={<AppLayout />}>
             <Route path="/" element={<Home />} />
-            <Route path="/" element={<Services />} />
+            <Route path="/alluser" element={<Allluser />} />
+            <Route path="/viewuser" element={<ViewUser />} />{" "}
+            <Route path="/alluser/deleteuser/:id" element={<Deleteuser />} />
+            <Route path="/alluser/viewuser/:id" element={<ViewUser />} />
+            <Route path="/myprofile" element={<MyProfile />} />
           </Route>
 
           <Route path="/login" element={<Login />} />
@@ -24,6 +33,6 @@ const App = () => {
       <ToastContainer />
     </div>
   );
-}
+};
 
-export default App
+export default App;

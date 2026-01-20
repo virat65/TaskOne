@@ -7,7 +7,7 @@ import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
 const Footer = () => {
   return (
     <footer className="py-5 border-top">
-      <div className="container">
+      <div className="container  footer">
         <div className="row gy-4">
           <div className="col-lg-3 col-md-6 text-center text-md-start">
             <img src={logo} width="140" alt="logo" className="mb-3" />
@@ -80,7 +80,7 @@ const Footer = () => {
           </div>
 
           <div className="col-lg-3 col-md-6 text-center text-md-start">
-            <div className="d-flex gap-3 mb-3 justify-content-center justify-content-md-start">
+            <div className="d-flex gap-3 mb-3 justify-content-center justify-content-md-start footer-icons ">
               <a href="#" className="text-dark">
                 <FaInstagram />
               </a>
@@ -94,7 +94,7 @@ const Footer = () => {
 
             <h6 className="mb-3">Discover our app</h6>
 
-            <div className="d-flex gap-2 justify-content-center justify-content-md-start">
+            <div className="d-flex gap-2 justify-content-center justify-content-md-start ">
               <img src={playstore} alt="play store" height="40" />
               <img src={aplestore} alt="apple store" height="40" />
             </div>

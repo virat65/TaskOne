@@ -12,12 +12,12 @@ import scenery from "../assets/images/scenery.jpg";
 
 const BookingSteps = () => {
   return (
-    <div className="container my-5">
+    <div className="container my-5 bookingsteps">
       <div className="row align-items-center">
         <div className="col-md-6">
-          <h6 className="text-muted">Easy and Fast</h6>
-          <h2>Book Your Next Trip</h2>
-          <h2>In 3 Easy Steps</h2>
+          <h6 className="text-muted fs-4 fw-bold ">Easy and Fast</h6>
+          <h2 className="fs-1 fw-bold">Book Your Next Trip</h2>
+          <h2 className="fs-1 fw-bold">In 3 Easy Steps</h2>
 
           <div className="steps d-flex gap-3 mb-4">
             <img src={step1} alt="step1" />

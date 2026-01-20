@@ -24,7 +24,7 @@ const TopDestinations = () => {
             <div className="card-body">
               <div className="d-flex justify-content-between mb-2">
                 <h5 className="card-title">Rome, Italy</h5>
-                <span className="text-primary">$5.42k</span>
+                <span className="">$5.42k</span>
               </div>
               <div className="d-flex align-items-center gap-2 text-muted">
                 <FaLocationArrow />
@@ -44,7 +44,7 @@ const TopDestinations = () => {
             <div className="card-body">
               <div className="d-flex justify-content-between mb-2">
                 <h5 className="card-title">London, UK</h5>
-                <span className="text-primary">$4.2k</span>
+                <span className="">$4.2k</span>
               </div>
               <div className="d-flex align-items-center gap-2 text-muted">
                 <FaLocationArrow />
@@ -64,7 +64,7 @@ const TopDestinations = () => {
             <div className="card-body">
               <div className="d-flex justify-content-between mb-2">
                 <h5 className="card-title">Full Europe</h5>
-                <span className="text-primary">$15k</span>
+                <span className="">$15k</span>
               </div>
               <div className="d-flex align-items-center gap-2 text-muted">
                 <FaLocationArrow />
