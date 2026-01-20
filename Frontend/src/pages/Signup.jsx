@@ -41,13 +41,12 @@ const Signup = () => {
         formData.append("adminKey", data.adminKey);
       }
 
-      const response = await axios.post(API.signup.url, formData, {
-        headers: { "Content-Type": "multipart/form-data" },
-      });
+      const response = await axios.post(API.signup.url, formData,
+      );
 
       if (response.data.status === 200) {
         toast.success(response.data.message);
-        navigate("/"); // redirect to login
+        navigate("/login"); // redirect to login
       } else {
         toast.error(response.data.message);
       }
@@ -149,7 +148,7 @@ const Signup = () => {
             </form>
 
             <p className="text-center mt-3">
-              Already have an account? <a href="/">Login</a>
+              Already have an account? <a href="/login">Login</a>
             </p>
           </div>
         </div>

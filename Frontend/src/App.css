@@ -1,91 +1,40 @@
-/* Minimal, clean styles for Signup/Login page */
-
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f4f6f8;
-  margin: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
+.a{
+  border:  2px solid black;
 }
 
-.container {
-  background-color: #fff;
-  padding: 30px 25px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-  width: 350px;
+.b{
+  border:  2px solid red;
 }
 
-h2 {
-  text-align: center;
-  font-weight: 600;
-  margin-bottom: 25px;
-  color: #333;
+.c{
+  border:  2px solid green;
 }
 
-form {
-  display: flex;
-  flex-direction: column;
+.d{
+  border:  2px solid blue;
 }
 
-label {
-  font-size: 14px;
-  color: #555;
-  margin-bottom: 5px;
+.e{
+  border:  2px solid yellow;
 }
 
-input[type="text"],
-input[type="email"],
-input[type="password"] {
-  padding: 10px 12px;
-  margin-bottom: 15px;
-  border: 1px solid #ddd;
-  border-radius: 6px;
-  font-size: 14px;
-  outline: none;
-  transition: border 0.2s;
+
+.f{
+  border:  2px solid aqua;
 }
 
-input[type="text"]:focus,
-input[type="email"]:focus,
-input[type="password"]:focus {
-  border-color: #007bff;
+
+.travel-img{
+  border:  2px solid black;
+  max-height: 500px;
 }
 
-.radioOption {
-  margin-right: 5px;
-  cursor: pointer;
+.demo-btn{
+  height: 50px;
+    width:   50px;
 }
 
-button {
-  padding: 10px;
-  font-size: 16px;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background 0.2s;
-}
-
-button:hover {
-  background-color: #0056b3;
-}
-
-p {
-  font-size: 14px;
-  text-align: center;
-  margin-top: 20px;
-  color: #555;
-}
-
-p a {
-  text-decoration: none;
-  color: #007bff;
-}
-
-p a:hover {
-  text-decoration: underline;
+.destinatio-images {
+  height: 550px;
+  object-fit: cover;
 }

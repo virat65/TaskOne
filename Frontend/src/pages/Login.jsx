@@ -40,7 +40,7 @@ const Login = () => {
         <div className="login-card p-4 shadow rounded">
           <h2 className="text-center mt-4">Login</h2>
 
-          <form onSubmit={handleSubmit} className="login-form">
+          <form onSubmit={handleSubmit} className="login-form w-100">
             {/* Email / Phone */}
             <div className="mb-3">
               <label htmlFor="email" className="form-label">
