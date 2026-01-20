@@ -10,7 +10,7 @@ import Services from "./Components/Services";
 import Allluser from "./pages/Allluser";
 import MyProfile from "./Components/Myprofile";
 
-import ViewUser from "./pages/Viewuser";
+import ViewUser from "./pages/ViewUser";
 import Deleteuser from "./pages/Deleteuser";
 const App = () => {
   return (
