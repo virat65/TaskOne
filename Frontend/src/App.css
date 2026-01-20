@@ -38,3 +38,81 @@
   height: 550px;
   object-fit: cover;
 }
+
+
+.scenrey-icons a {
+/* border:  2px solid black; */
+height: 50px;
+width: 50px ;
+justify-content: center;
+align-items: center;
+display: flex;
+border-radius: 50%;
+background-color: rgb(201, 201, 201);
+color: rgb(65, 63, 63);
+font-size: 1.2rem;
+
+}
+
+
+.steps img{
+  border-radius: 20px;
+
+}
+
+
+.testimonials-image{
+  width: 70px;
+  border-radius: 50%;
+  position: relative;
+  top: 10px;
+  left: -40px;
+}
+
+.testimonial-text{
+    position: relative;
+  top: -20px;
+  font-size: 1.2rem;
+
+}
+.companies{
+  margin-top: 80px;
+    margin-bottom: 80px;
+    border: 2px solid black;
+}
+.companies img{
+  width: 130px;
+  border: 2px solid black;
+  height: 50px;
+  object-fit: contain;
+}
+
+.unfit-image{
+
+  object-fit: cover !important;
+}
+
+.subscribe-btn{
+  background-color: orange;
+    height: 45px;
+    width: 8vw;
+}
+.subscribe-section form{
+/* border: 2px solid black; */
+margin-top: 20px;
+justify-content: space-around;
+display: flex;
+}
+.subscribe-section{
+  background-color: #e9e5f8;
+  border-top-left-radius: 70px;
+  height: 300px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.subscribe-section input{
+  width: 20vw;
+  height: 46px;
+}

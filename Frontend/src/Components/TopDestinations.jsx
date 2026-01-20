@@ -4,6 +4,7 @@ import london from "../assets/images/london.jpg";
 import rome from "../assets/images/rome.png";
 import { FaLocationArrow } from "react-icons/fa";
 
+
 const TopDestinations = () => {
   return (
     <section className="container my-5">

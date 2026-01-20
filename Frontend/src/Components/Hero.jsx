@@ -30,7 +30,7 @@ const Hero = () => {
                   Find out more
                 </a>
                 <span className="bg-warning btn-lg rounded-circle demo-btn d-flex justify-content-center align-items-center">
-                  <i class="fa-solid fa-play"></i>
+                  <i className="fa-solid fa-play"></i>
                 </span>
                 <span className="btn btn-success">Play Demo</span>
               </div>
